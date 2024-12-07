@@ -1,0 +1,788 @@
+@import url('https://fonts.googleapis.com/css2?family=poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+body{
+    background: #081b29;
+    color: #ededed;
+}
+/* .header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+} */
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background-color: white; /* Use a solid color for better readability */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adds shadow for clarity */
+}
+
+.logo{
+    position: relative;
+    font-size: 25px;
+    color: black;
+    /* change white to black */
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.logo::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background: #081b29;
+    animation: showRight 1s ease forwards;
+    animation-delay: 0.4s;
+}
+
+.navbar a {
+    font-size: 18px;
+    color:black;
+    /* change white to black */
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+
+}
+
+.navbar a:hover,
+.navbar a.active{
+    color: #00abf0;
+}
+
+.home{
+    height: 100vh;
+    background: url('back.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.home-content {
+    max-width: 600px;
+}
+
+.home-content h1 {
+    position: relative;
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.2;
+
+
+}
+
+.home-content h1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background: #081b29;
+    animation: showRight 1s ease forwards;
+    animation-delay: 1s;
+}
+
+.home-content h3 {
+    position: relative;
+    font-size: 32px;
+    font-weight: 700;
+    color: #00abf0;
+}
+
+.home-content h3::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background: #081b29;
+    animation: showRight 1s ease forwards;
+    animation-delay: 1.3s;
+}
+.home-content p {
+    position: relative;
+    font-size: 16px;
+    margin:20px 0 40px  ;
+}
+
+.home-content p::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background: #081b29;
+    animation: showRight 1s ease forwards;
+    animation-delay: 1.6s;
+}
+
+.home-content .btn-box {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 345px;
+    height: 50px;
+    
+}
+.home-content .btn-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background: #081b29;
+    animation: showRight 1s ease forwards;
+    animation-delay: 1.9s;
+    z-index: 2;
+}
+
+.btn-box a{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 130px;
+    height: 100%;
+    background: #00abf0;
+    border: 2px solid #081b29;
+    border-radius: 8px;
+    font-size: 19px;
+    color: #081b29;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.btn-box a:hover{
+    color: #00abf0;
+}
+
+.btn-box a:nth-child(2) {
+     background: transparent;
+     color: #081b29;
+}
+
+.btn-box a:nth-child(2):hover{
+    color: #081b29;
+}
+
+.btn-box a:nth-child(2)::before{
+    background: #00abf0;
+}
+
+.btn-box a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #081b29;
+    z-index: -1;
+    transition: .5s;
+}
+
+.btn-box a:hover::before {
+    width: 100%;
+
+}
+
+.home-sci{
+    position: absolute;
+    bottom: 40px;
+    width: 170px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.home-sci::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background: #081b29;
+    animation: showRight 1s ease forwards;
+    animation-delay: 2.5s;
+    z-index: 2;
+}
+
+.home-sci a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #00abf0;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #00abf0;
+    text-decoration: none;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+.home-sci a:hover{
+    color: #081b29;
+}
+
+.home-sci a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    
+    background:#00abf0 ;
+    z-index: -1;
+    transition: .5s;
+
+}
+
+.home-sci a:hover::before{
+    width: 100%;
+}
+ .home-imgHover{
+    position: absolute;
+    top: 0;
+    right: 30px;
+    width: 500px;
+    height: 100%;
+    background: transparent;
+    transition: 3s;
+    animation: manipActive .1s forwards;
+    animation-delay: 4s;
+    pointer-events: none;
+
+ }
+
+ .home-imgHover:hover{
+    background: #081b29;
+    opacity: .8;
+ }
+
+ .home-imgHover::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 120%;
+    width: 100%;
+    /* background: rgb(234, 220, 220); */
+    animation: showRight 1s ease forwards;
+    animation-delay: 3s;
+    z-index: 100;
+}
+
+ @keyframes showRight {
+    100% {
+        width:0 ;
+    }
+    
+}
+
+@keyframes manipActive {
+    100%{
+        pointer-events: auto;
+    }
+}
+
+
+
+.education-section {
+    padding: 50px 10%;
+    background: #0a2e41;
+    margin: 5px auto;
+    text-align: center;
+}
+
+.education-section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+#education-list {
+    margin-top: 20px;
+}
+
+.education-field {
+    margin: 10px 0;
+    padding: 10px;
+    background: #081b29;
+    border: 1px solid #00abf0;
+    border-radius: 5px;
+}
+
+#add-education {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #00abf0;
+    color: #081b29;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#add-education:hover {
+    background: #ededed;
+}
+
+
+
+
+/* Skills Section Styling */
+.skills-section {
+    padding: 40px;
+    background-color: #0a2e41; /* Matching the background color of the Education section */
+    border-radius: 10px;
+    max-width: 100%;
+    margin: 5px auto;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #ededed; /* Matching the text color to keep consistency */
+}
+
+.skills-section h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #00abf0; /* Using the blue accent color */
+}
+
+.skill-category {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #081b29; /* Matching the background color of education fields */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.skill-category h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #00abf0; /* Blue color for subheadings */
+}
+
+.skill-category ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.skill-category ul li {
+    margin-bottom: 5px;
+    color: #ddd; /* Slightly lighter color for list items */
+    line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+    .skills-section {
+        padding: 20px;
+    }
+    .skills-section h2 {
+        font-size: 24px;
+    }
+    .skill-category h3 {
+        font-size: 18px;
+    }
+}
+
+
+
+
+
+/* Experience Section Styling */
+.experience-section {
+    padding: 40px 10%;
+    background-color:#0a2e41 ; /* Lighter background to blend with site design */
+    border-radius: 10px;
+    max-width: 100%;
+    margin: 5px auto;
+    font-family: 'Roboto', sans-serif; /* Assuming Roboto is being used */
+}
+
+/* Heading for the Experience section */
+.experience-section h2 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #0066cc; /* Primary blue color for consistency */
+}
+
+/* Styling for each experience item */
+.experience-item {
+    background-color: #081b29; /* White background for items */
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Job Title Styling */
+.experience-item h3 {
+    font-size: 24px;
+    color: #00abf0; /* Dark grey for job title */
+    margin-bottom: 10px;
+}
+
+/* Company name Styling */
+.company-name {
+    font-size: 18px;
+    color: grey; /* Grey for company name */
+    margin-bottom: 5px;
+}
+
+/* Date Range Styling */
+.date-range {
+    font-size: 16px;
+    color: white; /* Lighter grey for dates */
+    margin-bottom: 10px;
+}
+
+/* Description Styling */
+.experience-description {
+    font-size: 16px;
+    color: white; /* Darker grey for the description */
+    line-height: 1.6;
+}
+
+/* Responsive Design for Small Screens */
+@media (max-width: 600px) {
+    .experience-section {
+        padding: 20px;
+    }
+
+    .experience-section h2 {
+        font-size: 24px;
+    }
+
+    .experience-item h3 {
+        font-size: 20px;
+    }
+
+    .company-name, .date-range {
+        font-size: 14px;
+    }
+
+    .experience-description {
+        font-size: 14px;
+    }
+}
+
+
+
+
+
+
+/* Project Section Styling */
+.project-section {
+    padding: 40px 10%;
+    background-color: #0a2e41; /* White background to match website design */
+    border-radius: 10px;
+    max-width: 100%;
+    margin: 5px auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Slight shadow for a modern look */
+    font-family: 'Roboto', sans-serif; /* Assuming Roboto font */
+}
+
+/* Heading for Project section */
+.project-section h2 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #00abf0; /* Dark color for heading */
+    font-weight: bold;
+}
+
+/* Project Item Styling */
+.project-item {
+    display: flex;
+    flex-direction: row;
+    background-color:#081b29;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border-left: 5px solid #0066cc; /* Blue left border to match the theme */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+    align-items: center;
+}
+
+/* Project Image Styling */
+.project-image {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+/* Project Details Styling */
+.project-details {
+    flex: 1;
+}
+
+.project-details h3 {
+    font-size: 22px;
+    color: #00abf0; /* Dark grey for project title */
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.project-details p {
+    font-size: 16px;
+    color: white; /* Darker grey for description */
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+/* View Details Button Styling */
+.view-details-button {
+    display: inline-block;
+    font-size: 16px;
+    padding: 10px 20px;
+    background-color: #0066cc; /* Blue button */
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.view-details-button:hover {
+    background-color: #004b99; /* Darker blue on hover */
+}
+
+/* Responsive Design for Small Screens */
+@media (max-width: 600px) {
+    .project-section {
+        padding: 20px;
+    }
+
+    .project-section h2 {
+        font-size: 24px;
+    }
+
+    .project-item {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-image {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 15px;
+    }
+
+    .project-details h3 {
+        font-size: 20px;
+    }
+
+    .project-details p {
+        font-size: 14px;
+    }
+
+    .view-details-button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+
+
+
+
+
+
+/* Contact Section Styling */
+.contact-section {
+    padding: 40px 10%;
+    background-color:#0a2e41 ; /* White background to match website design */
+    border-radius: 10px;
+    max-width: 100%;
+    margin: 0 auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for a clean look */
+    font-family: 'Roboto', sans-serif; /* Assuming Roboto font */
+}
+
+/* Heading for Contact section */
+.contact-section h2 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 40px;
+    color: #00abf0; /* Dark color for heading */
+    font-weight: bold;
+}
+
+/* Personal Details Section */
+.personal-details {
+    margin-bottom: 30px;
+}
+
+.personal-details h3 {
+    font-size: 22px;
+    color: #00abf0;
+    margin-bottom: 15px;
+}
+
+.personal-details ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.personal-details ul li {
+    font-size: 16px;
+    color: white;
+    margin-bottom: 8px;
+}
+
+.personal-details ul li strong {
+    color: #0066cc; /* Blue color for labels */
+}
+
+/* Social Media Links Section */
+.social-media-links {
+    margin-bottom: 40px;
+}
+
+.social-media-links h3 {
+    font-size: 22px;
+    color: #00abf0;
+    margin-bottom: 15px;
+}
+
+.social-media-links ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.social-media-links ul li {
+    margin-bottom: 10px;
+}
+
+.social-media-links ul li a {
+    font-size: 16px;
+    color: white; /* Blue color for links */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-media-links ul li a:hover {
+    color: #004b99; /* Darker blue on hover */
+}
+
+/* Contact Form Styling */
+.contact-form h3 {
+    font-size: 22px;
+    color: #00abf0;
+    margin-bottom: 20px;
+}
+
+.contact-form .form-group {
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    font-size: 16px;
+    color: white;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.contact-form textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.contact-form .send-btn {
+    background-color: #0066cc; /* Blue button */
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form .send-btn:hover {
+    background-color: #004b99; /* Darker blue on hover */
+}
+
+/* Responsive Design for Small Screens */
+@media (max-width: 600px) {
+    .contact-section {
+        padding: 20px;
+    }
+
+    .contact-section h2 {
+        font-size: 24px;
+    }
+
+    .personal-details h3,
+    .social-media-links h3,
+    .contact-form h3 {
+        font-size: 20px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 14px;
+    }
+
+    .contact-form .send-btn {
+        font-size: 14px;
+    }
+}
+
+
+
+
+
+
+
+
+
